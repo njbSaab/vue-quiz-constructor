@@ -1,0 +1,106 @@
+// Используем переменные из vars.scss
+@use "@/assets/styles/vars.scss" as *;
+
+// Tailwind стили
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$primary: rgba(27, 38, 66); // Основной цвет
+$secondary: #424242; // Второстепенный цвет
+$accent: rgba(0, 149, 255, 0.8); // Акцентный цвет
+
+// Фон и поверхности
+$light: #ffffff; // Цвет фона
+$surface: #f5f5f5; // Цвет поверхности
+
+// Состояния
+$error: rgb(245, 113, 182); // Цвет ошибок
+$info: rgb(18, 161, 253); // Цвет информации
+$success: #2dd4bf; // Цвет успеха
+$warning: #fb8c00; // Цвет предупреждения
+
+// Градиенты
+$gradient-light: linear-gradient(
+  90deg,
+  rgba(0, 149, 255, 0.424),
+  rgba(0, 149, 255, 0.8)
+);
+// Градиенты
+$gradient-opacity: linear-gradient(90deg, rgba(0, 149, 255, 0.5), transparent);
+$gradient-dark: linear-gradient(90deg, #1d273e, #11182a);
+
+//! components
+.title {
+  color: $primary;
+  text-shadow: 0 0 10px rgba(0, 183, 255, 0.7), 0 0 6px rgba(0, 149, 255, 0.5),
+    0 0 10px rgba(141, 83, 233, 0.7);
+}
+
+.el-button.el-button--primary.myBtn {
+  border-radius: 12px;
+  background: $gradient-light;
+  height: 2.5rem;
+  max-height: 2.5rem;
+  min-width: 150px;
+  box-shadow: 0 0 10px $accent;
+  border: 1px solid $gradient-light;
+  border-color: $gradient-light;
+  color: $light;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 10px $accent, 0 0 40px $accent, 0 0 80px $accent;
+  }
+}
+
+.menu {
+  width: fit-content;
+
+  .el-sub-menu .el-sub-menu__icon-arrow {
+    font-size: 12px !important;
+    margin-right: -60px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+  }
+  .el-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    height: 100dvh;
+    li {
+      padding: 15px 0;
+      justify-content: center;
+    }
+  }
+  .menu-item span {
+    font-size: 15px;
+    line-height: 1.1;
+  }
+  .el-menu-item.active {
+    background: $gradient-opacity;
+  }
+  .el-sub-menu .el-icon {
+    font-size: 25px;
+    width: fit-content;
+    flex: 1;
+  }
+  .el-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  .el-menu-item [class^="el-icon"] {
+    width: 35px;
+    height: 35px;
+  }
+  .el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container)
+    .el-sub-menu__title {
+    padding: 0 5px;
+  }
+  .el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container)
+    .el-menu-item {
+    padding-left: 0;
+    height: fit-content;
+  }
+}

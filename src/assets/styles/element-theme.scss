@@ -1,0 +1,12 @@
+@use "element-plus/theme-chalk/src/common/var.scss" with (
+  $primary-color: rgba(27, 38, 66),
+  $success-color: #2dd4bf,
+  $warning-color: #fb8c00,
+  $error-color: rgb(245, 113, 182),
+  $info-color: rgb(18, 161, 253),
+  $font-color-base: #424242,
+  $background-color: #ffffff,
+  $border-color-base: #f5f5f5
+);
+
+@use "element-plus/theme-chalk/src/index.scss"; // Подключение всех стилей
