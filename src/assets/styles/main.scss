@@ -36,7 +36,40 @@ $gradient-dark: linear-gradient(90deg, #1d273e, #11182a);
   text-shadow: 0 0 10px rgba(0, 183, 255, 0.7), 0 0 6px rgba(0, 149, 255, 0.5),
     0 0 10px rgba(141, 83, 233, 0.7);
 }
-
+.my-btn-accent {
+  border-radius: 12px;
+  background: $success;
+  height: 2.5rem;
+  max-height: 2.5rem;
+  min-width: 150px;
+  box-shadow: 0 0 10px $success;
+  border: 1px solid $gradient-light;
+  border-color: $success;
+  color: $light;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+  &:hover {
+    box-shadow: 0 0 10px $success, 0 0 40px $success, 0 0 80px $success;
+  }
+}
+.my-btn-dangger {
+  border-radius: 50%;
+  background: rgb(245, 113, 182);
+  height: 2.5rem;
+  max-height: 2.5rem;
+  box-shadow: 0 0 10px rgb(245, 113, 182);
+  border-color: rgb(245, 113, 182);
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+  padding: 5px 10px;
+  &:hover {
+    box-shadow: 0 0 10px $error, 0 0 40px $error, 0 0 80px $error;
+  }
+}
+.myBtn,
 .el-button.el-button--primary.myBtn {
   border-radius: 12px;
   background: $gradient-light;
@@ -48,12 +81,18 @@ $gradient-dark: linear-gradient(90deg, #1d273e, #11182a);
   border-color: $gradient-light;
   color: $light;
   cursor: pointer;
+  position: relative;
+  z-index: 999;
 
   &:hover {
     box-shadow: 0 0 10px $accent, 0 0 40px $accent, 0 0 80px $accent;
   }
 }
 
+.header {
+  position: relative;
+  z-index: 999;
+}
 .menu {
   width: fit-content;
 
@@ -102,5 +141,31 @@ $gradient-dark: linear-gradient(90deg, #1d273e, #11182a);
     .el-menu-item {
     padding-left: 0;
     height: fit-content;
+  }
+}
+.inner {
+  height: 90dvh;
+  overflow: hidden;
+  overflow-y: scroll;
+  .home-table-quiz {
+    .img {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+    }
+  }
+  .el-table__header {
+    width: 1038px;
+    position: fixed;
+    top: 75px;
+    height: 100px;
+    z-index: 99;
+    height: 50px;
+  }
+  .el-table__body-wrapper {
+    margin-top: 45px;
+  }
+  .el-table__row {
+    cursor: pointer;
   }
 }

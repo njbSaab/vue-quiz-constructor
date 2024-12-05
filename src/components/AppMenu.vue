@@ -4,7 +4,7 @@
         class="el-menu-vertical-demo"
         router
       >
-        <el-menu-item index="0">
+        <el-menu-item :index="ROUTES_PATH.HOME">
           <div class="logo w-[100px] h-auto p-2">
             <img src="https://i.imgur.com/4agXsdb.png" alt="" />
           </div>
@@ -14,7 +14,7 @@
          :class="{ active: isPathActive(ROUTES_PATH.HOME)}">
           <div class="menu-item flex flex-col items-center">
             <el-icon><CirclePlus /></el-icon>
-            <span>Create new</span>
+            <span>Edit Quiz</span>
           </div>
         </el-menu-item>
         <!-- Ссылка на Categories -->
